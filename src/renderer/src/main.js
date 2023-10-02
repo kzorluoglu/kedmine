@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// import GAuth from 'vue3-google-oauth2'
+import router from './router' // Assuming your router configuration is in 'router/index.js'
+
 const app = createApp(App)
 
-// const gAuthOptions = { clientId: 'XYZ.apps.googleusercontent.com', scope: 'email', prompt: 'consent', fetch_basic_profile: false }
-// app.use(GAuth, gAuthOptions)
+app.use(router) // This is how you inject the router into the Vue app
 
 // Mount the app to the DOM
 app.mount('#app');
